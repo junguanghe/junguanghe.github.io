@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://junguanghe.github.io/sitemap.xml

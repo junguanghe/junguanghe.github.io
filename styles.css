@@ -1,0 +1,105 @@
+:root {
+  color-scheme: light;
+  --paper: #f7f7f2;
+  --ink: #202a27;
+  --muted: #5e6862;
+  --accent: #285e4a;
+  --line: #d9ddd4;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  font-synthesis: none;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 30px; }
+body { margin: 0; font-size: 16px; line-height: 1.7; }
+::selection { background: #d5e5da; }
+a { color: inherit; text-underline-offset: 5px; }
+a:hover { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; border-radius: 2px; }
+p, h1, h2, h3 { margin: 0; }
+.page { max-width: 1120px; margin: 0 auto; padding: 0 56px; }
+.site-header { display: flex; justify-content: space-between; align-items: center; padding: 30px 0; border-bottom: 1px solid var(--line); }
+.wordmark { font-size: 25px; font-weight: 750; letter-spacing: -1.5px; line-height: 1; text-decoration: none; }
+.wordmark span { color: var(--accent); }
+nav { display: flex; gap: 30px; font-size: 14px; }
+nav a { text-decoration: none; padding: 6px 0; }
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) 180px; gap: 50px; align-items: end; padding: 92px 0 90px; }
+.eyebrow { font-size: 11px; text-transform: uppercase; letter-spacing: 1.8px; font-weight: 650; }
+.intro .eyebrow { margin-bottom: 24px; }
+h1, .contact h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; letter-spacing: -2px; }
+h1 { font-size: clamp(38px, 4.6vw, 58px); line-height: 1.15; margin-bottom: 28px; }
+h1 span { color: var(--accent); }
+.intro-copy { max-width: 590px; font-size: 17px; line-height: 1.85; color: var(--muted); }
+.intro-links { display: flex; align-items: center; flex-wrap: wrap; gap: 24px; margin-top: 32px; font-size: 14px; }
+.button { display: inline-flex; gap: 28px; align-items: center; background: var(--ink); color: white; padding: 12px 19px; border-radius: 3px; text-decoration: none; }
+.button:hover { background: var(--accent); color: white; }
+.text-link { text-decoration: none; }
+.text-link span { margin-left: 5px; color: var(--accent); }
+.intro-note { border-left: 1px solid var(--line); padding-left: 23px; padding-bottom: 2px; }
+.intro-note .eyebrow { margin-bottom: 15px; color: var(--muted); font-size: 10px; }
+.intro-note ul { margin: 0; padding: 0; list-style: none; font-size: 13px; line-height: 2.1; }
+.note-caption { margin-top: 23px; font-size: 12px; line-height: 1.8; color: var(--muted); }
+.section { border-top: 1px solid var(--line); padding: 40px 0 45px; }
+.section-heading { display: flex; align-items: baseline; gap: 19px; margin-bottom: 8px; }
+.section-number { color: var(--accent); font-size: 11px; font-variant-numeric: tabular-nums; }
+h2 { font-size: 22px; font-weight: 500; letter-spacing: -.4px; }
+.entries { margin-left: 34px; }
+.entry { display: grid; grid-template-columns: 194px minmax(0, 1fr); gap: 26px; padding: 29px 0; }
+.entry + .entry { border-top: 1px solid var(--line); }
+.date { color: var(--muted); font-size: 12px; padding-top: 5px; font-variant-numeric: tabular-nums; }
+h3 { font-size: 18px; font-weight: 550; line-height: 1.5; letter-spacing: -.25px; }
+.entry-heading { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.current { font-size: 10px; padding: 1px 8px; color: #285e4a; background: #e4ece2; border-radius: 20px; }
+.role { color: var(--muted); font-size: 12px; margin: 4px 0 13px; }
+.role span { padding: 0 5px; }
+.entry p:not(.date):not(.role):not(.degree) { color: var(--muted); font-size: 15px; max-width: 635px; }
+.degree { color: var(--muted); font-size: 14px; margin-top: 4px; }
+.education-entry { padding: 25px 0; }
+.contact { border-top: 1px solid var(--line); padding: 58px 0 64px; }
+.contact .eyebrow { color: var(--muted); margin-bottom: 12px; }
+.contact h2 { font-size: 46px; line-height: 1.2; margin-bottom: 23px; }
+.email { font-size: 19px; text-decoration-thickness: 1px; overflow-wrap: anywhere; }
+.email span { color: var(--accent); }
+.contact > p:last-child { margin-top: 14px; color: var(--muted); font-size: 13px; }
+.site-footer { border-top: 1px solid var(--line); padding: 24px 0 30px; display: flex; justify-content: space-between; gap: 20px; color: var(--muted); font-size: 11px; }
+.site-footer a { text-decoration: none; }
+.skip-link { position: absolute; left: 16px; top: -80px; padding: 10px 16px; background: var(--ink); color: white; z-index: 10; }
+.skip-link:focus { top: 12px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media (max-width: 900px) {
+  .page { padding: 0 36px; }
+  .intro { grid-template-columns: minmax(0, 1fr); gap: 35px; padding: 65px 0; }
+  .intro-note { border-left: 0; border-top: 1px solid var(--line); padding: 18px 0 0; }
+  .intro-note .eyebrow { margin-bottom: 8px; }
+  .intro-note ul { display: flex; flex-wrap: wrap; gap: 4px 24px; }
+  .note-caption { display: none; }
+  h1 { font-size: 54px; }
+  .entry { grid-template-columns: 150px minmax(0, 1fr); gap: 20px; }
+}
+@media (max-width: 580px) {
+  .page { padding: 0 23px; }
+  .site-header { padding: 23px 0; }
+  nav { gap: 18px; font-size: 12px; }
+  .intro { padding: 48px 0; gap: 30px; }
+  .intro .eyebrow { margin-bottom: 20px; }
+  h1 { font-size: clamp(34px, 8.8vw, 48px); letter-spacing: -1.4px; line-height: 1.18; margin-bottom: 23px; }
+  .intro-copy { font-size: 15px; line-height: 1.85; }
+  .intro-links { gap: 20px; font-size: 13px; margin-top: 25px; }
+  .button { gap: 18px; padding: 11px 14px; }
+  .intro-note .eyebrow { margin-bottom: 6px; }
+  .intro-note ul { gap: 2px 16px; font-size: 12px; }
+  .section { padding: 31px 0 30px; }
+  .section-heading { gap: 14px; }
+  .entries { margin-left: 0; }
+  .entry { grid-template-columns: minmax(0, 1fr); gap: 10px; padding: 25px 0; }
+  .date { padding-top: 0; font-size: 11px; }
+  h3 { font-size: 17px; }
+  .role { font-size: 11px; }
+  .entry p:not(.date):not(.role):not(.degree) { font-size: 14px; }
+  .contact { padding: 42px 0 46px; }
+  .contact h2 { font-size: 39px; }
+  .email { font-size: 15px; }
+  .site-footer { font-size: 10px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
